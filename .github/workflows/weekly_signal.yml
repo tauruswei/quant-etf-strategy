@@ -17,6 +17,8 @@ on:
 jobs:
   run-signal:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 👈 解决 Exit Code 128：显式授予云端机器人写入和 git push 权限
     timeout-minutes: 30
 
     steps:
